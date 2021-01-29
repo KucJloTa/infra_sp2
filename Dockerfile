@@ -10,4 +10,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # при старте контейнера выполнить runserver 
-CMD python manage.py migrate && gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
