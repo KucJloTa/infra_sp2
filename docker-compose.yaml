@@ -6,10 +6,6 @@ volumes:
 services:
   db:
     image: postgres:12.4
-    environment:
-      - POSTGRES_PASSWORD=django_password
-      - POSTGRES_USER=django_user
-      - POSTGRES_DB=django_db
 
     volumes:
       - postgres_data:/var/lib/postgresql/data/
